@@ -41,7 +41,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   <Link href="/">Blog</Link>
                   <Link href="/about">About</Link>
                 </nav>
-                <ModeToggle />
               </div>
             </header>
             <main>{children}</main>

@@ -16,7 +16,7 @@ export default function Home() {
         .map((post, index) => (
           <article
             key={post._id}
-            className={`flex items-center border p-2 hover:bg-gray-400 hover:cursor-pointer border-collapse
+            className={`flex items-center border p-2 hover:bg-gray-100 hover:cursor-pointer border-collapse
         ${index === 0 ? "rounded-t-md border-b-0" : ""} 
         ${index === allPosts.length - 1 ? "rounded-b-md" : ""} 
         ${index !== 0 && index !== allPosts.length - 1 ? "border-b-0" : ""}`}
