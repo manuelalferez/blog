@@ -8,7 +8,6 @@ const parseDate = (dateString: string | undefined): Date => {
 export default function Home() {
   return (
     <div className="py-6 prose dark:prose-invert">
-      <h1>Blog</h1>
       {allPosts
         .sort(
           (a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime()
