@@ -26,7 +26,7 @@ const PostsByYear: React.FC<PostsByYearProps> = ({ posts }) => {
         .sort()
         .reverse()
         .map((year) => (
-          <div key={year} className="mb-6">
+          <div key={year} className="mb-6 mt-10">
             {/* Posts for the Year */}
             {groupedPosts[year].map((post, index) => (
               <article
