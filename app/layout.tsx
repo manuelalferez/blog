@@ -29,7 +29,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <div className="flex items-center justify-between gap-12">
                 <div className="flex items-center">
                   <Image
-                    src={"https://avatars.githubusercontent.com/u/38152841?v=4"}
+                    src={"https://i.imgur.com/hJieCmM.jpeg"}
                     alt="manuel profile picture"
                     width={40}
                     height={40}
