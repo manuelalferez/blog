@@ -1,4 +1,4 @@
-interface PhotoMetaData {
+export interface PhotoMetaData {
   description: string;
   date: string;
 }

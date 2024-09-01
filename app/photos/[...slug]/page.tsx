@@ -1,5 +1,6 @@
 import { metaData } from "@/content/photos/metadata";
 import Image from "next/image";
+import Link from "next/link";
 
 const extension = ".jpg";
 
@@ -40,6 +41,28 @@ export default async function Page({ params }: PhotoProps) {
   console.log(photoId + extension);
   return (
     <div>
+      <Link href="../photos">
+        <span className="flex gap-1 py-4 items-center">
+          <svg
+            className="w-5 h-5 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m15 19-7-7 7-7"
+            />
+          </svg>
+          View All Gallery
+        </span>
+      </Link>
       <Image
         src={photo}
         alt={photoId}
