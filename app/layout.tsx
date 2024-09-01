@@ -44,7 +44,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 </nav>
               </div>
             </header>
-            <main>{children}</main>
+            <main className="py-6">{children}</main>
             <Footer />
           </div>
           <Analytics />

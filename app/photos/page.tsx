@@ -1,0 +1,34 @@
+import Image from "next/image";
+import Link from "next/link";
+
+async function getPhotos() {
+  const fs = require("fs").promises;
+  const path = require("path");
+
+  const photoDir = path.join(process.cwd(), "public/photos");
+  const files = await fs.readdir(photoDir);
+
+  return files
+    .filter((file: string) => file.toLowerCase().endsWith(".jpg"))
+    .map((file: string) => `/photos/${file}`);
+}
+
+export default async function Page() {
+  const photos = await getPhotos();
+
+  return (
+    <div className="grid grid-cols-3 gap-4">
+      {photos.map((photo: string, index: number) => (
+        <Link key={index} href={`${photo.split(".")[0]}`}>
+          <Image
+            src={photo}
+            alt={`Photo ${index + 1}`}
+            width={500}
+            height={500}
+            className="object-cover w-full h-full"
+          />
+        </Link>
+      ))}
+    </div>
+  );
+}

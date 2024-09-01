@@ -78,7 +78,7 @@ export default async function PostPage({ params }: PostProps) {
   }
 
   return (
-    <article className="py-6 prose dark:prose-invert">
+    <article className="prose dark:prose-invert">
       <h1 className="mb-2">{post.title}</h1>
       <p className="text-sm text-slate-500 dark:text-slate-400">
         {getRelativeTime(post.date!)}
