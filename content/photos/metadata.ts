@@ -174,4 +174,17 @@ export const metaData: { [key: string]: PhotoMetaData } = {
       "I used to go hiking with my friend Angel, where we enjoyed deep conversations. Soon after, we became roommates",
     date: "2020-02-08",
   },
+  "photo-040.jpg": {
+    description: "Day 2: Lourenzá to Abadín, 25km",
+    date: "2024-06-04",
+  },
+  "photo-041.jpg": {
+    description:
+      "Flying to Avilés with my mother. I'm about to do El Camino and have been waiting a year for it",
+    date: "2024-06-02",
+  },
+  "photo-042.jpg": {
+    description: "Arriving to Santiago. El Camino",
+    date: "2024-06-11",
+  },
 };
