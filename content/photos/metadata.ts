@@ -187,4 +187,18 @@ export const metaData: { [key: string]: PhotoMetaData } = {
     description: "Arriving to Santiago. El Camino",
     date: "2024-06-11",
   },
+  "photo-043.jpg": {
+    description:
+      "At the exhibition Andy Warhol & Keith Haring: Party of Life, Ilana is viewing some of the artwork displayed on the screen. The room where it is showcased is stunning, featuring vibrant blues.",
+    date: "2024-09-22",
+  },
+  "photo-044.jpg": {
+    description: `Notebooks from Orhan Pamuk's exhibitions, exploring the power of objects in storytelling. This collection reflects his experiences with Istanbul's museums and their cultural significance. `,
+    date: "2024-09-19",
+  },
+
+  "photo-045.jpg": {
+    description: `Wagen 1, situated within the Verkehrszentrum at the Deutsches Museum in Munich, offers a unique bar experience housed in a beautifully refurbished vintage train. `,
+    date: "2024-09-17",
+  },
 };
