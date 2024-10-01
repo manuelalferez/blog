@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SocialLinks } from "./social-links";
 
 export function Footer() {
@@ -23,6 +24,12 @@ export function Footer() {
             />
           </svg>
           by Manuel Alférez
+        </p>
+        <p className="text-sm text-gray-500 pb-4">
+          Still here? Go enjoy your day! Oh, btw, check out some of my{" "}
+          <Link href="/photos" className="underline">
+            photos
+          </Link>
         </p>
         <SocialLinks />
       </div>
