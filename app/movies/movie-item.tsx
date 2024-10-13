@@ -1,7 +1,7 @@
 import { MovieIMDB } from "@/content/movies/ratings";
 import Image from "next/image";
-import { getRelativeTime } from "../posts/[...slug]/page";
 import { formatMovieDuration, getYearFromReleaseDate } from "./utils";
+import { getRelativeTime } from "../utils";
 
 export default function MovieItem({
   movie,
