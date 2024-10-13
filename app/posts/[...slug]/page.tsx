@@ -6,7 +6,7 @@ import { Mdx } from "@/components/mdx-components";
 
 import { formatDistanceToNow } from "date-fns";
 
-function getRelativeTime(date: Date | string): string {
+export function getRelativeTime(date: Date | string): string {
   const timeDifference: string = formatDistanceToNow(new Date(date), {
     addSuffix: true,
   });

@@ -29,7 +29,12 @@ export function Footer() {
           Still here? Go enjoy your day! Oh, btw, check out some of my{" "}
           <Link href="/photos" className="underline">
             photos
-          </Link>
+          </Link>{" "}
+          and{" "}
+          <Link href="/movies" className="underline">
+            movies
+          </Link>{" "}
+          I watched.
         </p>
         <SocialLinks />
       </div>
