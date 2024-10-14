@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import MovieItem from "./movie-item";
 import { MovieIMDB } from "@/content/movies/ratings";
 import { getMoviePoster, getSummary, MovieTMDB } from "./utils";
+import confetti from "canvas-confetti";
 
 interface WhatToWatchProps {
   imdbRatings: MovieIMDB[];
@@ -36,6 +37,17 @@ export default function WhatToWatch({
 
   const recommendedMovies = getRandomRecommendations(imdbRatings, 3);
 
+  const handleRecommendClick = () => {
+    if (!showRecommendations) {
+      setShowRecommendations(!showRecommendations);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+    }
+  };
+
   return (
     <div className="mt-8">
       <h2 className="text-2xl font-bold prose">What to Watch Today</h2>
@@ -46,7 +58,7 @@ export default function WhatToWatch({
 
       <span
         className="hover:cursor-pointer inline-flex items-center justify-center px-2 py-2 text-sm font-semibold text-black bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200 transition-colors"
-        onClick={() => setShowRecommendations(!showRecommendations)}
+        onClick={handleRecommendClick}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +67,7 @@ export default function WhatToWatch({
           viewBox="0 0 24 24"
           className="w-5 h-5 mr-1"
         >
-          <g fill="none" fill-rule="evenodd">
+          <g fill="none" fillRule="evenodd">
             <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
             <path
               fill="currentColor"
@@ -63,7 +75,7 @@ export default function WhatToWatch({
             />
           </g>
         </svg>
-        Recommend me
+        Recommend something to me
       </span>
       <div
         className={`flex flex-col gap-2 mt-4 transition-opacity duration-500 ${
