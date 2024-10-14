@@ -33,14 +33,14 @@ export default function Movies({ imdbRatings, tmdbMovies }: MoviesProps) {
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row items-center justify-between gap-1 mb-4">
-        <div className="flex gap-2 flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-4">
+        <div className="flex gap-2 flex-col md:flex-row md:flex-1">
           <Input
             type="text"
             placeholder="Search movie"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-[180px] md:w-[240px]"
+            className="w-[240px] md:w-[240px]"
           />
           <Select onValueChange={(value) => setSelectedRating(Number(value))}>
             <SelectTrigger className="w-[180px]">
@@ -60,11 +60,13 @@ export default function Movies({ imdbRatings, tmdbMovies }: MoviesProps) {
             </SelectContent>
           </Select>
         </div>
-        <p>{filteredMovies.length} titles</p>
+        <p className="text-right md:text-left">
+          {filteredMovies.length} titles
+        </p>
       </div>
 
-      <div className="flex justify-center mt-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="mt-4">
+        <div className="flex flex-col gap-2">
           {filteredMovies.map((movie, index) => (
             <MovieItem
               key={index}
