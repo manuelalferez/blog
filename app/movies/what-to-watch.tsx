@@ -76,9 +76,7 @@ export default function WhatToWatch({
           showRecommendations ? "opacity-100" : "opacity-0 max-h-0"
         } overflow-hidden`}
       >
-        <p className="prose my-4">
-          Here are 3 recommendations for today (more tomorrow):
-        </p>
+        <p className="prose my-4">Recommendations for today (more tomorrow):</p>
         <div className="flex flex-col gap-2">
           {recommendedMovies.map((movie, index) => (
             <MovieItem
