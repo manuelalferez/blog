@@ -2,6 +2,7 @@ import React from "react";
 import { fetchRatedMovies } from "./utils";
 import { imdbRatings } from "@/content/movies/ratings";
 import Movies from "./movies";
+import WhatToWatch from "./what-to-watch";
 
 export default async function Page() {
   const tmdbMovies = await fetchRatedMovies();
@@ -14,6 +15,8 @@ export default async function Page() {
         change my rating system, at the moment they are rated from 1-10; very
         reductionist, I know. I will work to change it
       </p>
+      <hr className="my-4" />
+      <WhatToWatch imdbRatings={imdbRatings} tmdbMovies={tmdbMovies} />
       <hr className="my-4" />
       <Movies imdbRatings={imdbRatings} tmdbMovies={tmdbMovies} />
     </div>
