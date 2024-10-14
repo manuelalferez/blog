@@ -1,5 +1,4 @@
 import { MovieIMDB } from "@/content/movies/ratings";
-import Image from "next/image";
 import { formatMovieDuration, getYearFromReleaseDate } from "./utils";
 import { getRelativeTime } from "../utils";
 
@@ -15,7 +14,7 @@ export default function MovieItem({
   return (
     <div className="w-full p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 flex">
       <div className="flex-shrink-0">
-        <Image
+        <img
           src={posterUrl}
           alt={movie.title.toString()}
           width={100}

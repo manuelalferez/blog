@@ -49,13 +49,7 @@ export default function WhatToWatch({
   };
 
   return (
-    <div className="mt-8">
-      <h2 className="text-2xl font-bold prose">What to Watch Today</h2>
-      <p className="prose my-4">
-        Looking for a movie to watch can be super tedious. Here are 3
-        recommendations for today (more tomorrow).
-      </p>
-
+    <div>
       <span
         className="hover:cursor-pointer inline-flex items-center justify-center px-2 py-2 text-sm font-semibold text-black bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200 transition-colors"
         onClick={handleRecommendClick}
@@ -78,21 +72,26 @@ export default function WhatToWatch({
         Recommend something to me
       </span>
       <div
-        className={`flex flex-col gap-2 mt-4 transition-opacity duration-500 ${
+        className={`transition-opacity duration-500 ${
           showRecommendations ? "opacity-100" : "opacity-0 max-h-0"
         } overflow-hidden`}
       >
-        {recommendedMovies.map((movie, index) => (
-          <MovieItem
-            key={index}
-            movie={movie}
-            posterUrl={getMoviePoster({
-              movies: tmdbMovies,
-              title: movie.title,
-            })}
-            summary={getSummary({ movies: tmdbMovies, title: movie.title })}
-          />
-        ))}
+        <p className="prose my-4">
+          Here are 3 recommendations for today (more tomorrow):
+        </p>
+        <div className="flex flex-col gap-2">
+          {recommendedMovies.map((movie, index) => (
+            <MovieItem
+              key={index}
+              movie={movie}
+              posterUrl={getMoviePoster({
+                movies: tmdbMovies,
+                title: movie.title,
+              })}
+              summary={getSummary({ movies: tmdbMovies, title: movie.title })}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
