@@ -27,12 +27,14 @@ export default function WhatToWatch({
     const filteredMovies = movies.filter(
       (movie) => movie.yourRating >= 7 && movie.yourRating <= 10
     );
+
     const randomMovies = [...filteredMovies];
-    const randomIndex = (index: number) =>
-      (index + randomSeed) % randomMovies.length;
-    return randomMovies
-      .map((_, index) => randomMovies[randomIndex(index)])
-      .slice(0, count);
+    for (let i = randomMovies.length - 1; i > 0; i--) {
+      const j = (i + randomSeed) % randomMovies.length;
+      [randomMovies[i], randomMovies[j]] = [randomMovies[j], randomMovies[i]];
+    }
+
+    return randomMovies.slice(0, count);
   };
 
   const recommendedMovies = getRandomRecommendations(imdbRatings, 3);
