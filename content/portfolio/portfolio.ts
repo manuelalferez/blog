@@ -55,6 +55,12 @@ export const experiences: Experience[] = [
       "At Ujalearn, I managed the integration of +200 Moodle courses into a new application for +900 teachers. I successfully connected the application to the Moodle API, creating a robust backend system that could handle +1,000 data transactions per day, while providing clear documentation for future developments. I also set up the environments needed to deploy the application and configured Prisma for database management, which streamlined our workflows and minimized errors. In addition, I developed a personalized course dashboard that enhanced the user experience by providing intelligent recommendations based on previous completions, thus improving the users' learning journey.",
   },
   {
+    company: "Khadra Management Ltd",
+    position: "Digital Transformation Consultant",
+    description:
+      "At Khadra Management Ltd, I transformed the company's workflow by designing and implementing a new database and task management system that improved email processing from 40 to over 160 messages per day. I integrated Outlook with Notion to streamline email management, categorizing tasks and setting alerts for important communications. This integration not only improved productivity, but also reduced errors from 1-2 per week to only 1-2 per month. In addition, I migrated the company's bank transactions and receipts from inefficient spreadsheets to a Notion database, resulting in a substantial reduction in report generation time from 15 minutes to less than 1.5 minutes, improving the company's efficiency.",
+  },
+  {
     company: "Google Developer Groups",
     position: "Lead Organiser",
     description:
