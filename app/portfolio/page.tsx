@@ -25,7 +25,7 @@ const projects: Project[] = [
     description:
       "Flowinance simplifies financial management by providing an intuitive platform to visualize and track your budget. It enables transaction categorization through AI (ChatGPT). Users can manage multiple currencies with a single click, export their data and soon receive a weekly summary of their transactions in Telegram. Built on Supabase for data management and logins, and Resend for sending emails to users. All transactions are end-to-end encrypted. It is an Open Source project in which +20 developers have participated.",
     technologies: ["Next.js", "Supabase", "Resend", "TailwindCSS"],
-    website: "https://flowinance.vercel.app/",
+    website: "https://flowinance.com/",
     code: "https://github.com/manuelalferez/flowinance",
   },
   {
