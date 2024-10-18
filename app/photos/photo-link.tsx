@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function PhotoLink({
@@ -24,7 +23,7 @@ export default function PhotoLink({
       className="rounded-md overflow-hidden"
     >
       {isLoading && <Skeleton className="w-[200px] h-[200px]" />}
-      <Image
+      <img
         src={photo}
         alt={`Photo ${index + 1}`}
         width={500}
@@ -32,7 +31,7 @@ export default function PhotoLink({
         className={`object-cover w-full h-full p-2 bg-white hover:bg-slate-100 border border-slate-200 rounded-md shadow-md dark:bg-slate-800 dark:border-slate-700 flex ${
           isLoading ? "hidden" : "block"
         }`}
-        onLoadingComplete={() => setIsLoading(false)}
+        onError={() => setIsLoading(false)}
       />
     </Link>
   );
