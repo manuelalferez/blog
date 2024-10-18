@@ -68,7 +68,7 @@ export default function Page() {
         Experience{" "}
         <a
           href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https%3A%2F%2Fraw.githubusercontent.com%2Fmanuelalferez%2Fresume%2Fmaster%2Fresume.pdf"
-          className="hover:cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-black bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 transition-colors"
+          className="hover:cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-black bg-slate-100 border border-slate-300 rounded-md hover:bg-slate-200 transition-colors"
           target="_blank"
         >
           <svg
@@ -130,7 +130,7 @@ export default function Page() {
                     href={project.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:cursor-pointer no-underline inline-flex items-center justify-center px-2 py-2 text-sm font-semibold text-black bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 transition-colors"
+                    className="hover:cursor-pointer no-underline inline-flex items-center justify-center px-2 py-2 text-sm font-semibold text-black bg-slate-100 border border-slate-300 rounded-md hover:bg-slate-200 transition-colors"
                   >
                     Website
                   </a>
@@ -138,7 +138,7 @@ export default function Page() {
                     href={project.code}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:cursor-pointer gap-1 no-underline inline-flex items-center justify-center px-2 py-2 text-sm font-semibold text-black bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 transition-colors"
+                    className="hover:cursor-pointer gap-1 no-underline inline-flex items-center justify-center px-2 py-2 text-sm font-semibold text-black bg-slate-100 border border-slate-300 rounded-md hover:bg-slate-200 transition-colors"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

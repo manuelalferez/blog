@@ -42,7 +42,7 @@ export default async function Page() {
             alt={`Photo ${index + 1}`}
             width={500}
             height={500}
-            className="object-cover w-full h-full rounded-md"
+            className="object-cover w-full h-full p-2 bg-white hover:bg-slate-100 border border-slate-200 rounded-md shadow-md dark:bg-slate-800 dark:border-slate-700 flex"
           />
         </Link>
       ))}

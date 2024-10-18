@@ -12,7 +12,7 @@ export default function MovieItem({
   summary: string;
 }) {
   return (
-    <div className="w-full p-4 bg-white border border-gray-200 rounded-md shadow-md dark:bg-gray-800 dark:border-gray-700 flex">
+    <div className="w-full p-4 bg-white border border-slate-200 rounded-md shadow-md dark:bg-slate-800 dark:border-slate-700 flex">
       <div className="flex-shrink-0">
         <img
           src={posterUrl}
@@ -28,21 +28,21 @@ export default function MovieItem({
           {movie.title}
         </h2>
 
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+        <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
           {getYearFromReleaseDate(movie.releaseDate)} ·{" "}
           {formatMovieDuration(movie.duration)}
         </span>
 
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
           Watched: {getRelativeTime(movie.dateRated)}
         </p>
 
-        <p className="mt-2 text-sm text-muted-foreground text-gray-600">
+        <p className="mt-2 text-sm text-muted-foreground text-slate-600">
           {summary}
         </p>
 
         <div className="mt-2 flex items-center justify-between">
-          <span className="inline-flex items-center justify-center px-2 py-1 text-sm font-semibold text-black bg-white border border-gray-300 rounded-md transition-colors">
+          <span className="inline-flex items-center justify-center px-2 py-1 text-sm font-semibold text-black bg-white border border-slate-300 rounded-md transition-colors">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -62,7 +62,7 @@ export default function MovieItem({
             href={movie.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold text-black bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 transition-colors"
+            className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold text-black bg-slate-100 border border-slate-300 rounded-md hover:bg-slate-200 transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

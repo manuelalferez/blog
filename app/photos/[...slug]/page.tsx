@@ -41,10 +41,13 @@ export default async function Page({ params }: PhotoProps) {
   console.log(photoId + extension);
   return (
     <div>
-      <Link href="../photos">
+      <Link
+        href="../photos"
+        className="no-underline hover:underline inline-block text-sm font-medium"
+      >
         <span className="flex gap-1 py-4 items-center">
           <svg
-            className="w-5 h-5 text-gray-800 dark:text-white"
+            className="w-5 h-5 text-slate-800 dark:text-white"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -63,6 +66,7 @@ export default async function Page({ params }: PhotoProps) {
           View All Gallery
         </span>
       </Link>
+
       <Image
         src={photo}
         alt={photoId}
@@ -71,10 +75,10 @@ export default async function Page({ params }: PhotoProps) {
         className="object-cover w-full rounded-md"
       />
       <div className="mt-4">
-        <p className="text-base font-medium text-gray-800">
+        <p className="text-base font-medium text-slate-800">
           {metaData[photoId + extension].description}
         </p>
-        <p className="text-sm text-gray-500 mt-1">
+        <p className="text-sm text-slate-500 mt-1">
           {formatDate(metaData[photoId + extension].date)}
         </p>
       </div>
