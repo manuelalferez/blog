@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <div className="flex items-center justify-between gap-12">
-        <div className="flex items-center">
+        <Link href="/" className="flex items-center hover:cursor-pointer">
           <Image
             src={"https://i.imgur.com/hJieCmM.jpeg"}
             alt="Manuel profile picture"
@@ -16,12 +16,9 @@ const Header = () => {
             className="rounded-full m-2 ml-0"
           />
           <span className="text-base font-medium">Manuel</span>
-        </div>
+        </Link>
         <nav className="ml-auto text-sm font-medium space-x-6 flex items-center">
           <ModeToggle />
-          <Link href="/" className="no-underline hover:underline">
-            Blog
-          </Link>
           <Link href="/about" className="no-underline hover:underline">
             About
           </Link>
