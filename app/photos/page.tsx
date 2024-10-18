@@ -1,6 +1,5 @@
 import { metaData, PhotoMetaData } from "@/content/photos/metadata";
-import Image from "next/image";
-import Link from "next/link";
+import PhotoLink from "./photo-link";
 
 async function getPhotos() {
   const fs = require("fs").promises;
@@ -36,15 +35,7 @@ export default async function Page() {
   return (
     <div className="grid grid-cols-3 gap-4">
       {sortedPhotos.map((photo: string, index: number) => (
-        <Link key={index} href={`${photo.split(".")[0]}`}>
-          <Image
-            src={photo}
-            alt={`Photo ${index + 1}`}
-            width={500}
-            height={500}
-            className="object-cover w-full h-full p-2 bg-white hover:bg-slate-100 border border-slate-200 rounded-md shadow-md dark:bg-slate-800 dark:border-slate-700 flex"
-          />
-        </Link>
+        <PhotoLink key={index} photo={photo} index={index} />
       ))}
     </div>
   );
