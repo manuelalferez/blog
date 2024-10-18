@@ -75,10 +75,10 @@ export default async function Page({ params }: PhotoProps) {
         className="object-cover w-full rounded-md"
       />
       <div className="mt-4">
-        <p className="text-base font-medium text-slate-800">
+        <p className="text-base font-medium text-slate-700 dark:text-slate-200">
           {metaData[photoId + extension].description}
         </p>
-        <p className="text-sm text-slate-500 mt-1">
+        <p className="text-sm text-slate-500 dark:text-slate-500 mt-1">
           {formatDate(metaData[photoId + extension].date)}
         </p>
       </div>

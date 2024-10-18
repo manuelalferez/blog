@@ -29,7 +29,7 @@ const PostsByYear: React.FC<PostsByYearProps> = ({ posts }) => {
             {groupedPosts[year].map((post, index) => (
               <article
                 key={post._id}
-                className={`p-1 border-t hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer ${
+                className={`p-1 border-t hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer ${
                   index === 0 ? "" : "pl-20"
                 }`}
               >
