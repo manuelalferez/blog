@@ -42,7 +42,7 @@ export default async function Page() {
             alt={`Photo ${index + 1}`}
             width={500}
             height={500}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full rounded-md"
           />
         </Link>
       ))}

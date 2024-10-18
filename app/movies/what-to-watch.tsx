@@ -53,7 +53,7 @@ export default function WhatToWatch({
   return (
     <div>
       <span
-        className="hover:cursor-pointer inline-flex items-center justify-center px-2 py-2 text-sm font-semibold text-black bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200 transition-colors"
+        className="hover:cursor-pointer inline-flex items-center justify-center px-2 py-2 text-sm font-semibold text-black bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 transition-colors"
         onClick={handleRecommendClick}
       >
         <svg

@@ -68,7 +68,7 @@ export default async function Page({ params }: PhotoProps) {
         alt={photoId}
         width={500}
         height={500}
-        className="object-cover w-full"
+        className="object-cover w-full rounded-md"
       />
       <div className="mt-4">
         <p className="text-base font-medium text-gray-800">

@@ -12,14 +12,14 @@ export default function MovieItem({
   summary: string;
 }) {
   return (
-    <div className="w-full p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 flex">
+    <div className="w-full p-4 bg-white border border-gray-200 rounded-md shadow-md dark:bg-gray-800 dark:border-gray-700 flex">
       <div className="flex-shrink-0">
         <img
           src={posterUrl}
           alt={movie.title.toString()}
           width={100}
           height={150}
-          className="rounded-lg object-cover md:h-full w-24 md:w-32"
+          className="rounded-md object-cover md:h-full w-24 md:w-32"
         />
       </div>
 
@@ -42,7 +42,7 @@ export default function MovieItem({
         </p>
 
         <div className="mt-2 flex items-center justify-between">
-          <span className="inline-flex items-center justify-center px-2 py-1 text-sm font-semibold text-black bg-white border border-gray-300 rounded-lg transition-colors">
+          <span className="inline-flex items-center justify-center px-2 py-1 text-sm font-semibold text-black bg-white border border-gray-300 rounded-md transition-colors">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -62,7 +62,7 @@ export default function MovieItem({
             href={movie.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold text-black bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200 transition-colors"
+            className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold text-black bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
