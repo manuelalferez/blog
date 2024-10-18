@@ -91,10 +91,16 @@ export default function Page() {
           return (
             <div key={index} className="my-8">
               <div className="flex items-center gap-1">
-                <h4 className="m-0">{experience.company},</h4>
-                <span className="text-sm">{experience.position}</span>
+                <h4 className="m-0 dark:text-slate-200">
+                  {experience.company},
+                </h4>
+                <span className="text-sm dark:text-slate-200">
+                  {experience.position}
+                </span>
               </div>
-              <p className="my-2">{experience.description}</p>
+              <p className="my-2 dark:text-slate-200">
+                {experience.description}
+              </p>
             </div>
           );
         })}
@@ -106,12 +112,14 @@ export default function Page() {
         </p>
         <div className="grid gap-2">
           {projectData.map((project, index) => (
-            <Card key={index}>
+            <Card key={index} className="dark:bg-slate-950">
               <CardHeader>
                 <CardTitle className="m-0">{project.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="m-0 text-slate-700">{project.description}</p>
+                <p className="m-0 text-slate-700 dark:text-slate-200">
+                  {project.description}
+                </p>
                 <p className="text-sm text-muted-foreground">
                   Built with: {project.technologies.join(", ")}
                 </p>
@@ -179,7 +187,7 @@ export default function Page() {
                               stroke="currentColor"
                               stroke-linecap="round"
                               stroke-linejoin="round"
-                              stroke-width="2"
+                              strokeWidth="2"
                               d="M12 12v4m0 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4M8 8a2 2 0 1 0 0-4a2 2 0 0 0 0 4m0 0v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V8m0 0a2 2 0 1 0 0-4a2 2 0 0 0 0 4"
                             />
                           </svg>

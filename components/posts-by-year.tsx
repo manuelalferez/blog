@@ -1,4 +1,3 @@
-// PostsByYear.tsx
 import React from "react";
 import Link from "next/link";
 import { Post } from "@/.contentlayer/generated";
@@ -27,27 +26,26 @@ const PostsByYear: React.FC<PostsByYearProps> = ({ posts }) => {
         .reverse()
         .map((year) => (
           <div key={year} className="mb-6 mt-10">
-            {/* Posts for the Year */}
             {groupedPosts[year].map((post, index) => (
               <article
                 key={post._id}
-                className={`p-1 border-t hover:bg-gray-50 cursor-pointer ${
+                className={`p-1 border-t hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer ${
                   index === 0 ? "" : "pl-20"
                 }`}
               >
                 <Link
                   href={post.slug}
-                  className="no-underline flex items-center"
+                  className="no-underline flex items-center dark:text-slate-200"
                 >
                   {index === 0 && (
                     <div className="flex-shrink-0 w-14 mr-5">
-                      <span className="block text-gray-500 text-sm font-mono">
+                      <span className="block text-slate-500 text-sm font-mono dark:text-slate-200">
                         {year}
                       </span>
                     </div>
                   )}
                   <div className="flex-grow">
-                    <span className="block text-gray-800 font-normal">
+                    <span className="block text-slate-800 font-normal dark:text-slate-200">
                       {post.title}
                     </span>
                   </div>

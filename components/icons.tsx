@@ -67,7 +67,7 @@ export default function IconLink({
 }: IconLinkProps) {
   return (
     <a
-      className="text-gray-500 hover:text-gray-900 transition duration-75 ease-in-out"
+      className="text-slate-500 dark:hover:text-slate-300 hover:text-slate-900 transition duration-75 ease-in-out"
       href={href}
       title={title}
       rel={rel}
